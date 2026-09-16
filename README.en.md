@@ -6,6 +6,8 @@ A dynamic application launcher and mode switcher for **Rofi**, featuring two-lev
 
 ---
 
+![](screenshots/lcars.png)
+
 ## 📋 Requirements and Dependencies
 
 To ensure the script works correctly and the themes render properly (fonts and visuals), install the following packages:
