@@ -1,0 +1,17 @@
+/**
+ * whisker-chocolate.rasi — paleta cacao/chocolate (cálida, tonos café y caramelo)
+ */
+  @import "config.rasi"
+* {
+    bg0:        #2b1d14ee;
+    bg1:        #3e2a1ef0;
+    bg-sel:     #8b5a2bcc;
+    fg0:        #f0e0c8ff;
+    fg1:        #c9a988ff;
+    border-col: #4a3626ff;
+    accent:     #d2691eff;
+
+    background-color:   transparent;
+    text-color:          @fg0;
+    font:                "Sans 11";
+}

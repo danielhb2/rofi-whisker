@@ -1,0 +1,17 @@
+/**
+ * whisker-ember.rasi
+ */
+  @import "config.rasi"
+* {
+    bg0:        #120603ee;
+    bg1:        #200c08f0;
+    bg-sel:     #ff550033;
+    fg0:        #ffd9b3ff;
+    fg1:        #ff9933ff;
+    border-col: #ff6600ff;
+    accent:     #ffdd00ff;
+
+    background-color: transparent;
+    text-color: @fg0;
+    font: "Sans 11";
+}

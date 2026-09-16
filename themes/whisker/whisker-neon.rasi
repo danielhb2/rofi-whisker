@@ -1,0 +1,17 @@
+/**
+ * whisker-neon.rasi
+ */
+  @import "config.rasi"
+* {
+    bg0:        #12011aee;
+    bg1:        #12000af0;
+    bg-sel:     #014d59cc;
+    fg0:        #dd05f5ff;
+    fg1:        #e9f505ff;
+    border-col: #04c9dbff;
+    accent:     #0ffa02ff;
+
+    background-color:   transparent;
+    text-color:          @fg0;
+    font:                "Sans 11";
+}

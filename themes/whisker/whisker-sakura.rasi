@@ -1,0 +1,17 @@
+/**
+ * whisker-sakura.rasi
+ */
+  @import "config.rasi"
+* {
+    bg0:        #12080cee;
+    bg1:        #1c1018f0;
+    bg-sel:     #ff69b433;
+    fg0:        #ffe8f0ff;
+    fg1:        #ffb6c1ff;
+    border-col: #ff69b4ff;
+    accent:     #ffd700ff;
+
+    background-color: transparent;
+    text-color: @fg0;
+    font: "Sans 11";
+}

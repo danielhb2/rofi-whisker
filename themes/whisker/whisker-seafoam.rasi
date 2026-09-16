@@ -1,0 +1,115 @@
+/**
+ * whisker-seafoam.rasi
+ * Tema marino en gama de verdes pastel / alga
+ */
+@import "config.rasi"
+
+* {
+    /* Paleta base */
+    green-dark:     #317336;
+    green-med:      #3E9345;
+    green-main:     #4CB355;
+    green-soft:     #6CC173;
+    green-light:    #8CCE92;
+    green-pale:     #ADDCB1;
+
+    /* Asignación de variables con ligera transparencia */
+    bg0:            #317336f0; 
+    bg1:            #3E9345f0; 
+    bg-sel:         #8CCE9244; 
+
+    fg0:            #ffffff; 
+    fg1:            #ADDCB1; 
+
+    border-col:     #6CC173; 
+    accent:         #ADDCB1; 
+
+    background-color: transparent;
+    text-color:       @fg0;
+    font:             "Sans 11";
+}
+
+window {
+    background-color: @bg0;
+    border:           1px;
+    border-color:     @border-col;
+    border-radius:    8px;
+    padding:          10px;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing:          10px;
+}
+
+inputbar {
+    background-color: @bg1;
+    border-radius:    6px;
+    padding:          6px 10px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color:       @accent;
+}
+
+entry {
+    text-color:       @fg0;
+    placeholder-color:@fg1;
+    placeholder:      "Buscar...";
+}
+
+listbox {
+    background-color: transparent;
+}
+
+listview {
+    background-color: transparent;
+    spacing:          4px;
+    lines:            8;
+}
+
+element {
+    padding:          6px 10px;
+    border-radius:    4px;
+    background-color: transparent;
+    text-color:       @fg0;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             20px;
+}
+
+element selected {
+    background-color: @bg-sel;
+    text-color:       @fg0;
+    border:           1px;
+    border-color:     @green-light;
+}
+
+sidebar {
+    background-color: transparent;
+    spacing:          4px;
+}
+
+button {
+    padding:          6px 10px;
+    border-radius:    4px;
+    background-color: @bg1;
+    text-color:       @fg0;
+}
+
+button selected {
+    background-color: @bg-sel;
+    text-color:       @accent;
+    border:           1px;
+    border-color:     @green-light;
+}

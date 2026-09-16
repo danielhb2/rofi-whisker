@@ -1,0 +1,18 @@
+/**
+ * whisker-vpneon.rasi
+ * Vaporwave Neon
+ */
+  @import "config.rasi"
+* {
+    bg0:        #090012ee;
+    bg1:        #12001df0;
+    bg-sel:     #ff00aa33;
+    fg0:        #ff4dffff;
+    fg1:        #00ffffff;
+    border-col: #ff00ffff;
+    accent:     #00ff88ff;
+
+    background-color:   transparent;
+    text-color:          @fg0;
+    font:                "Sans 11";
+}

@@ -1,0 +1,146 @@
+/**
+ * Whisker Win95
+ * Tema inspirado en la estética clásica de Windows 95
+ */
+@import "config.rasi"
+
+* {
+    bg0:        #c0c0c0;
+    bg1:        #ffffff;
+    bg2:        #000080;
+    bg3:        #008080;
+    bg4:        #dddddd;
+    bg5:        #999999;
+    bg-sel:     #000080;
+
+    fg0:        #000000;
+    fg1:        #000000;
+
+    border-light: #ffffff;
+    border-dark:  #808080;
+    border-black: #000000;
+    accent: @border-black;
+
+    inputbg:    #ffffff;
+
+    background-color: @bg0;
+
+    text-color: @fg0;
+    font: "Liberation Sans 12";
+    padding: 0;
+}
+
+window {
+    background-color:   @bg3;
+    border:              2px;
+    border-color:        @border-black;
+    border-radius:       0px;
+}
+
+/* Barra de título estilo Win95 */
+inputbar {
+    /*background-color:   @bg2;*/
+    background-image:    url("/home/dhbmb/.config/rofi/images/fondo-windows.png", width);
+    text-color:          @bg1;
+    border:              0px 0px 2px 0px;
+    border-color:        @border-black;
+    padding:             6px 8px;
+}
+
+prompt {
+    text-color:  #000000;
+    font:        "Liberation Sans Bold 12";
+    padding: 4px;
+    vertical-align:   0.5;
+}
+
+entry {
+    background-color:  transparent;
+    text-color:         @bg1;
+    placeholder:        "Buscar aplicaciones...";
+    placeholder-color:  #808080;
+    border:             2px;
+    border-color:       @border-dark;
+    padding:            2px 4px;
+}
+
+listbox {
+    background-color:  @bg3;
+    border:             2px;
+    border-color:       @border-dark;
+    margin:             6px;
+}
+
+listview {
+    spacing:            2px;
+    background-color:   @bg3;
+}
+
+scrollbar {
+    width:             16px;
+    background-color:  @bg0;
+    handle-color:      @bg0;
+    border:            2px;
+    border-color:      @border-dark;
+}
+
+element {
+    padding:            4px 8px;
+    background-color:   @bg0;
+    text-color:          @fg0;
+    border-radius:       0px;
+    border-color:       @border-black;
+    border: 0 1px 1px 0;
+}
+
+element selected {
+    background-color:  @bg-sel;
+    text-color:         #ffffff;
+    border:             0 1px 1px 0;
+    background-image:    url("/home/dhbmb/.config/rofi/images/fondo-windows.png", width);
+}
+
+element-icon {
+    background-color:  @bg0;
+}
+
+element-icon selected {
+    background-color:  transparent;
+}
+
+mainbox {
+    background-color:  @bg0;
+    border:             0px;
+}
+
+sidebar {
+    background-color:  @bg0;
+    border:             0px 2px 0px 0px;
+    border-color:       @border-dark;
+    padding:            6px 4px;
+    spacing:            4px;
+}
+
+mode-switcher {
+    orientation: vertical;
+    spacing:     4px;
+}
+
+button {
+    background-color:   @bg4;
+    text-color:          @fg0;
+    padding:             6px 10px;
+    border:              0 2px 2px 0;
+    border-color:        @border-dark;
+    horizontal-align:    0;
+    border-radius: 3px;
+    
+}
+
+button selected {
+    background-color:   @bg5;
+    border:              0 2px 2px 0;
+    border-color:        @border-black;
+    border-radius: 3px;
+}
+

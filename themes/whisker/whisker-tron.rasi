@@ -1,0 +1,17 @@
+/**
+ * whisker-tron.rasi
+ */
+  @import "config.rasi"
+* {
+    bg0:        #02040af0;
+    bg1:        #050d18f0;
+    fg0:        #6ee7ffff;
+    fg1:        #8ef9ffff;
+    accent:     #00d4ffff;
+    border-col: #00e5ffff;
+    bg-sel:     #00d4ff33;
+
+    background-color:   transparent;
+    text-color:          @fg0;
+    font:                "Sans 11";
+}

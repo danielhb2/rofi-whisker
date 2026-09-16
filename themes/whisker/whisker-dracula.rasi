@@ -1,0 +1,18 @@
+/**
+ * whisker-dracula.rasi — paleta Dracula
+ * https://draculatheme.com/contribute
+ */
+  @import "config.rasi"
+* {
+    bg0:        #282a36ee;
+    bg1:        #44475af0;
+    bg-sel:     #bd93f9cc;
+    fg0:        #f8f8f2ff;
+    fg1:        #6272a4ff;
+    border-col: #44475aff;
+    accent:     #ff79c6ff;
+
+    background-color:   transparent;
+    text-color:          @fg0;
+    font:                "Sans 11";
+}

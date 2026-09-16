@@ -1,0 +1,17 @@
+/**
+ * whisker-solarized-dark.rasi
+ */
+  @import "config.rasi"
+* {
+    bg0:        #002b36ee;
+    bg1:        #073642f0;
+    bg-sel:     #268bd233;
+    fg0:        #93a1a1ff;
+    fg1:        #2aa198ff;
+    border-col: #268bd2ff;
+    accent:     #b58900ff;
+
+    background-color: transparent;
+    text-color: @fg0;
+    font: "Sans 11";
+}

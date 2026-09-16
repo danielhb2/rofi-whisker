@@ -1,0 +1,17 @@
+/**
+ * whisker-dark.rasi
+ */
+  @import "config.rasi"
+* {
+    bg0:        #23252bee;
+    bg1:        #2b2e37f0;
+    bg-sel:     #4c7899e6;
+    fg0:        #e8e8e8ff;
+    fg1:        #a8a8a8ff;
+    border-col: #3a3d46ff;
+    accent:     #5294e2ff;
+
+    background-color:   transparent;
+    text-color:          @fg0;
+    font:                "Sans 11";
+}

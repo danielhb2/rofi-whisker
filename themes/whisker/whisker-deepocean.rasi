@@ -1,0 +1,17 @@
+/**
+ * whisker-deepocean.rasi
+ */
+  @import "config.rasi"
+* {
+    bg0:        #021018ee;
+    bg1:        #041a26f0;
+    bg-sel:     #0099ff33;
+    fg0:        #d6f5ffff;
+    fg1:        #66d9ffff;
+    border-col: #00ccffff;
+    accent:     #00ffccff;
+
+    background-color: transparent;
+    text-color: @fg0;
+    font: "Sans 11";
+}

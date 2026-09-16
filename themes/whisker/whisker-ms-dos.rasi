@@ -1,0 +1,145 @@
+/**
+ * Whisker MS-DOS
+ * Tema inspirado en la consola clásica de MS-DOS
+ */
+@import "config.rasi"
+
+* {
+    bg0:        #000000;
+    bg1:        #000000;
+    bg2:        #000000;
+
+    bg-sel:     #c0c0c0;
+
+    fg0:        #c0c0c0;
+    fg1:        #808080;
+
+    border-col: #c0c0c0;
+    inputbg:    #000000;
+
+    accent:     #00ff00;
+
+    background-color: @bg0;
+
+    text-color: @fg0;
+    font: "PxPlus IBM VGA8 16";
+    padding: 0;
+}
+
+configuration {
+    display-filebrowser: "<span color='yellow'>C</span>:\\directorio> ";
+}
+
+window {
+    background-color:   @bg0;
+    border:              1px;
+    border-color:        @border-col;
+    border-radius:       0px;
+}
+
+inputbar {
+    background-color:   @bg0;
+    text-color:          @fg0;
+    border:              0px 0px 1px 0px;
+    border-color:        @border-col;
+    padding:             4px 6px;
+}
+
+prompt {
+    text-color:  @accent;
+    font: "PxPlus IBM VGA8 16";
+    vertical-align:   0.5;
+}
+
+entry {
+    background-color:  @inputbg;
+    text-color:         @fg0;
+    placeholder:        "Buscar aplicaciones_";
+    placeholder-color:  @fg1;
+    padding:            0px 4px;
+}
+
+listbox {
+    background-color:  @bg0;
+    border:             0px 0px 0px 1px;
+    border-color:       @border-col;
+    margin:             0px;
+}
+
+listview {
+    spacing:            5px;
+    background-color:   @bg0;
+}
+
+scrollbar {
+    width:             1px;
+    background-color:  @bg0;
+    handle-color:      @fg0;
+    border:            0px;
+}
+
+/* Elemento normal */
+element {
+    padding:            2px 8px;
+    background-color:   transparent;
+    text-color:         @fg0;
+    border-radius:      0px;
+    children:       [ element-icon, element-text ];
+}
+
+element-text {
+    background-color:   @bg0;
+    text-color:         inherit;
+    vertical-align:   0.5;
+    padding:            6px 2px 6px 2px;
+}
+
+element-icon {
+    background-color:   transparent;
+}
+
+/* Elemento seleccionado (Barra gris MS-DOS con texto e ícono en negro) */
+element selected {
+    background-color:   @bg0;
+    text-color:         @bg1;
+    vertical-align:   0.5;
+}
+
+
+element selected element-icon {
+    background-color:   transparent;
+}
+
+mainbox {
+    background-color:  @bg0;
+    border:             0px;
+}
+
+sidebar {
+    background-color:  @bg0;
+    border:             0px 1px 0px 0px;
+    border-color:       @border-col;
+    padding:            2px 0px;
+    spacing:            0px;
+    width:              190px;
+}
+
+mode-switcher {
+    orientation: vertical;
+    spacing:     0px;
+}
+
+button {
+    background-color:   @bg0;
+    text-color:          @fg0;
+    padding:             2px 8px;
+    horizontal-align:    0;
+    margin: 0 3px 0 3px;
+}
+
+button selected {
+    background-color:   @bg-sel;
+    text-color:          @bg1;
+    border-radius:       0px;
+    
+}

@@ -1,0 +1,177 @@
+/**
+ * whisker-mac1984.rasi
+ * Estética 1-bit estilo Apple Macintosh System 1 (1984)
+ */
+@import "config.rasi"
+
+* {
+    markup:           true;
+
+    /* Paleta Monocromática */
+    mac-white:        #ffffff;
+    mac-black:        #000000;
+    mac-gray:         #888888;
+
+    /* Variables de compatibilidad */
+    bg0:              @mac-white;
+    bg1:              @mac-white;
+    bg-card:          @mac-white;
+    bg-input:         @mac-white;
+    bg-sel:           @mac-black;
+
+    fg0:              @mac-black;
+    fg1:              @mac-black;
+
+    border-col:       @mac-black;
+    accent:           @mac-black;
+
+    background-color: transparent;
+    text-color:       @mac-black;
+    font:             "PxPlus IBM VGA8 14";
+}
+
+window {
+    background-color: @mac-white;
+    border:           2px;
+    border-color:     @mac-black;
+    border-radius:    8px;
+    padding:          6px;
+    width:            640px;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing:          8px;
+    children:         [ inputbar, listbox ];
+}
+
+/* Espaciador transparente para forzar el centrado horizontal */
+textbox-dummy {
+    expand:           true;
+    background-color: transparent;
+}
+
+inputbar {
+    background-image: url("~/.config/rofi/images/mac-stripes.png", both);
+    border:           1px;
+    border-color:     @mac-black;
+    border-radius:    4px;
+    padding:          4px 8px;
+    spacing:          6px;
+    /* La casillita va ANTES del primer espaciador */
+    children:         [ textbox-closebox, textbox-dummy, prompt, entry, textbox-dummy ];
+}
+
+textbox-closebox {
+    expand:           false;
+    content:          "☐";
+    vertical-align:   0.5;
+    background-color: @mac-white;
+    text-color:       @mac-black;
+    padding:          0 2px;
+}
+
+prompt {
+    expand:           false;
+    background-color: @mac-white;
+    text-color:       @mac-black;
+    padding:          1px 6px;
+    font:             "PxPlus IBM VGA8 14";
+    border: 1px ;
+    border-color: @mac-black;
+    vertical-align:   0.5;
+}
+
+entry {
+    expand:           false;
+    width:            280px;
+    background-color: @mac-white;
+    text-color:       @mac-black;
+    placeholder-color:@mac-gray;
+    placeholder:      "Buscar...";
+    padding:          1px 6px;
+    border: 1px ;
+    border-color: @mac-black;
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+}
+
+listbox {
+    background-color: transparent;
+    spacing:          8px;
+    orientation:      horizontal;
+    children:         [ mode-switcher, listview ];
+}
+
+mode-switcher {
+    orientation:      vertical;
+    background-color: transparent;
+    spacing:          4px;
+    expand:           false;
+}
+
+button {
+    padding:          6px 10px;
+    border-radius:    4px;
+    border:           1px;
+    border-color:     @mac-black;
+    background-color: @mac-white;
+    text-color:       @mac-black;
+    horizontal-align: 0.0;
+}
+
+button selected {
+    background-color: @mac-black;
+    text-color:       @mac-white;
+}
+
+listview {
+    background-color: transparent;
+    border:           1px;
+    border-color:     @mac-black;
+    border-radius:    4px;
+    padding:          4px;
+    spacing:          2px;
+    lines:            7;
+    columns:          2;
+    fixed-height:     true;
+    expand:           true;
+}
+
+element {
+    padding:          4px 8px;
+    border-radius:    2px;
+    background-color: transparent;
+    text-color:       @mac-black;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+    markup:           true;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             18px;
+}
+
+/* Forzado de inversión 1-bit mediante pseudo-clases específicas de Rofi */
+element selected.normal,
+element selected.active {
+    background-color: @mac-black;
+    text-color:       @mac-white;
+}
+
+element selected.normal element-text,
+element selected.active element-text {
+    background-color: transparent;
+    text-color:       @mac-white;
+    highlight:        bold #ffffff; 
+}
+
+element selected.normal element-icon,
+element selected.active element-icon {
+    background-color: transparent;
+}

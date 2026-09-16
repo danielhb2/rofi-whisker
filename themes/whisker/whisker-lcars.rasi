@@ -1,0 +1,120 @@
+/**
+ * LCARS Classic
+ */
+@import "config.rasi"
+ 
+* {
+    bg0:        #080808ee;
+    bg1:        #161616f0;
+    bg2:        #114887ff;
+
+    bg-sel:     #6699ff30;
+
+    fg0:        #ffd7a8ff;
+
+    fg1:        #99ddffff;
+
+    border-col: #ff9966ff;
+    inputbg:    #000057;
+
+    accent:     #cc99ffff;
+    sideborder: #ff9966ff;
+    violeta:    #800080;
+
+    background-color: transparent;
+    
+    text-color: @fg0;
+    font: "Sans 11";
+    padding: 0;
+}
+
+configuration {
+    display-filebrowser: "<span foreground='maroon'></span> Archivos";
+}
+
+window {
+    border-radius:      40px;
+    background-color:   @bg2;
+    border-color:       @bg2;
+} 
+
+button selected {
+    background-color:   @fg1;
+    text-color:         @bg0;
+    border-radius:      0 20px 20px 0;
+    border-color:       @sideborder;
+}
+
+inputbar {
+    border:             0px 0px 5px 0px;
+    border-color:       @bg2;
+    border-radius:      30px 30px 0 0;
+    background-color:   @inputbg;
+}
+
+listbox {
+    border:             0px 0px 0px 5px;
+    border-color:       @bg2;
+    background-color:   @bg1;
+    border-radius:      0 0 30px 0;
+    margin-top:         18px;
+}
+
+listview {
+    spacing:            6px;
+}
+
+element {
+    border-radius:      20px;
+    padding:            3px 10px;
+    margin:             5px;
+}
+
+element selected {
+    border-color:       @sideborder;
+    border:             2px;
+}
+
+mainbox {
+    border:             8px 50px 8px 50px;
+    border-color:       @bg2;
+}
+
+/* 1. Modificar la barra lateral para agregar la imagen al final */
+sidebar {
+    border:             0;
+    border-color:       @sideborder;
+    border-radius:      0 0 0 30px;
+    orientation:        vertical;
+    vertical-align:     0.0;
+    children:           [ mode-switcher, dummy, lcars-image ];
+}
+
+/* 2. Un 'dummy' que absorberá todo el espacio vertical sobrante */
+dummy {
+    expand:             true;
+    background-color:   transparent;
+}
+
+/* 3. Contenedor de botones */
+mode-switcher {
+    expand:             false;
+    orientation:        vertical;
+    spacing:            0px;
+    padding:            0px;
+    margin:             0px;
+}
+
+/* 4. Estilos de los botones */
+button {
+    expand:             false;
+    padding:            8px 12px;
+    margin:             0px 0px 6px 0px;
+    vertical-align:     0.5;
+    border-radius:      0 20px 20px 0;
+    border:             2px;
+    color:              @bg0;
+    border-color:       @violeta;
+    background-color:   @border-col;
+}
+

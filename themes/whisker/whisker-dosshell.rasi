@@ -1,0 +1,179 @@
+/**
+ * Whisker DOS Shell Classic
+ * Inspirado en la paleta Teal / Grey de MS-DOS Shell (DOSSHELL.EXE)
+ */
+@import "config.rasi"
+
+* {
+    /* Paleta de colores fiel a DOSSHELL */
+    bg-base:     #c0c0c0; /* Fondo gris claro principal */
+    bg-menu:     #008080; /* Verde azulado / Teal */
+    bg-sel:      #0000a8; /* Azul oscuro de selección */
+
+    fg-main:     #000000; /* Texto negro */
+    fg-menu:     #ffffff; /* Texto blanco */
+    fg-disabled: #55aaaa; /* Texto deshabilitado */
+
+    border-col:  #000000;
+
+    /* Alias globales de compatibilidad para config.rasi */
+    fg0:            @fg-main;
+    fg1:            @fg-main;
+    bg0:            @bg-base;
+    bg1:            @bg-menu;
+    accent:         @fg-menu;
+
+    background-color: transparent;
+    text-color:       @fg-main;
+    font:             "PxPlus IBM VGA8 14";
+    padding:          0;
+    margin:           0;
+    markup:           true;
+}
+
+configuration {
+    display-filebrowser: "C:\\directorio> ";
+}
+
+/* Ventana principal */
+window {
+    background-color:   @bg-menu;
+    border:              1px 2px 2px 1px;
+    border-color:        @border-col;
+    border-radius:       0px;
+    padding:             0px;
+}
+
+mainbox {
+    background-color:   @bg-menu;
+    border:              0px;
+    children:            [ inputbar, content-box ];
+}
+
+/* Barra de búsqueda */
+inputbar {
+    background-color:   @bg-menu;
+    text-color:          @fg-menu;
+    border:              0px 0px 1px 0px;
+    border-color:        @border-col;
+    padding:             4px 6px;
+    children:            [ prompt, entry ];
+}
+
+prompt {
+    text-color:       @fg-menu;
+    font:             "PxPlus IBM VGA8 14";
+    vertical-align:   0.5;
+}
+
+entry {
+    background-color:  @bg-base;
+    text-color:         @fg-main;
+    placeholder:        "Buscar...";
+    placeholder-color:  @fg-main;
+    padding:            0px 4px;
+    border:             1px 0 0 1px;
+    border-color:       @fg-main;
+}
+
+/* Contenedor central con mode-switcher en lugar de sidebar */
+content-box {
+    orientation:        horizontal;
+    background-color:   @bg-base;
+    children:           [ mode-switcher, listbox ];
+}
+
+/* Sidebar lateral de modos */
+mode-switcher {
+    orientation:        vertical;
+    background-color:   @bg-menu;
+    border:             0px 1px 0px 0px;
+    border-color:       @border-col;
+    padding:            2px 0px;
+    spacing:            0px;
+    width:              190px;
+    expand:             false;
+}
+
+button {
+    background-color:   @bg-menu;
+    text-color:          @fg-main;
+    padding:             3px 8px;
+    horizontal-align:    0;
+    border-radius:       0px;
+    margin:              0 2px 0 3px;
+    border:              0 0 1px 0;
+    border-color:        @fg-main;
+}
+
+button selected {
+    background-color:   @bg-sel;
+    text-color:          @fg-menu;
+    border:              0 1px 1px 0;
+    border-color:        @fg-menu;
+    border-radius:       0px;
+}
+
+/* Listbox y Listview */
+listbox {
+    background-color:   @bg-menu;
+    padding:            2px;
+}
+
+listview {
+    columns:            2;
+    spacing:            0px;
+    background-color:   @bg-base;
+    text-color:         @fg-main;
+    lines:              10;
+}
+
+scrollbar {
+    width:             12px;
+    background-color:  @bg-menu;
+    handle-color:      @bg-base;
+    border:            1px;
+    border-color:      @border-col;
+}
+
+/* Elementos de lista */
+element {
+    background-color:   @bg-base;
+    text-color:          @fg-main;
+    border-radius:       0px;
+    children:           [ element-icon, element-text ];
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+    padding:          4px 2px 4px 2px;
+    markup:           true;
+}
+
+element-icon {
+    background-color:   transparent;
+    size:               16px;
+}
+
+/* Inversión y prioridad de color para el elemento seleccionado */
+element selected.normal,
+element selected.active {
+    background-color:   @bg-sel;
+    text-color:          @fg-menu;
+    border:              0 1px 1px 0;
+    border-color:        @fg-menu;
+}
+
+element selected.normal element-text,
+element selected.active element-text {
+    background-color: transparent;
+    text-color:       @fg-menu;
+    highlight:        bold #ffffff;
+}
+
+element selected.normal element-icon,
+element selected.active element-icon {
+    background-color: transparent;
+}

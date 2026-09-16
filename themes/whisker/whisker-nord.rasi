@@ -1,0 +1,16 @@
+/**
+ * whisker-nord.rasi
+ */
+  @import "config.rasi"
+* {
+    bg0:        #2e3440ee;
+    bg1:        #3b4252f0;
+    bg-sel:     #5e81ace6;
+    fg0:        #eceff4ff;
+    fg1:        #d8dee9ff;
+    border-col: #4c566aff;
+    accent:     #88c0d0ff;
+    background-color:   transparent;
+    text-color:          @fg0;
+    font:                "Sans 11";
+}

@@ -1,0 +1,144 @@
+/**
+ * whisker-palmera.rasi
+ * Tema tropical/marino corregido para compatibilidad con rofi-whisker.sh
+ */
+@import "config.rasi"
+
+* {
+    /* Paleta base de verdes */
+    green-dark:     #317336;
+    green-med:      #3E9345;
+    green-main:     #4CB355;
+    green-soft:     #6CC173;
+    green-light:    #8CCE92;
+    green-pale:     #ADDCB1;
+
+    /* Capas traslúcidas */
+    bg-card:        #ADDCB1b8;
+    bg-input:       #8CCE92d0;
+    bg-sel:         #31733644;
+
+    /* Variables de compatibilidad global para config.rasi */
+    bg0:            @bg-card;
+    bg1:            @bg-input;
+    border-col:     #4CB355; 
+    accent:         #317336; 
+    fg0:            #1f4722;
+    fg1:            #317336;
+
+    background-color: transparent;
+    text-color:       @fg0;
+    font:             "Sans 11";
+}
+
+window {
+    background-image: url("~/.config/rofi/images/palmera.jpg", width);
+    border:           2px;
+    border-color:     @border-col;
+    border-radius:    12px;
+    padding:          14px;
+    width:            640px;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing:          12px;
+    /* Dejamos que mainbox gestione los componentes de primer nivel */
+    children:         [ inputbar, listbox ];
+}
+
+inputbar {
+    background-color: @bg-input;
+    border:           1px;
+    border-color:     @border-col;
+    border-radius:    8px;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color:       @accent;
+}
+
+entry {
+    text-color:       @fg0;
+    placeholder-color:@fg1;
+    placeholder:      "Buscar...";
+}
+
+/* El listbox actua como contenedor horizontal de la botonera lateral y la lista */
+listbox {
+    background-color: @bg-card;
+    border:           1px;
+    border-color:     @border-col;
+    border-radius:    8px;
+    padding:          8px;
+    spacing:          12px;
+    orientation:      horizontal;
+    children:         [ mode-switcher, listview ];
+}
+
+/* Configuración limpia de mode-switcher para evitar la falla del ejecutable */
+mode-switcher {
+    orientation:      vertical;
+    background-color: transparent;
+    spacing:          4px;
+    expand:           false;
+    border:  2px ;
+    border-color: @fg1;
+    border-radius: 8px;
+}
+
+button {
+    padding:          8px 12px;
+    border-radius:    6px;
+    background-color: transparent;
+    text-color:       @fg0;
+    horizontal-align: 0.0;
+}
+
+button selected {
+    background-color: @bg-sel;
+    text-color:       @accent;
+    border:           1px;
+    border-color:     @green-dark;
+}
+
+listview {
+    background-color: transparent;
+    border:  2px ;
+    border-color: @fg1;
+    border-radius: 8px;
+    padding:          0px;
+    spacing:          4px;
+    lines:            7;
+    columns:          2;
+    fixed-height:     true;
+    expand:           true;
+}
+
+element {
+    padding:          8px 10px;
+    border-radius:    6px;
+    background-color: transparent;
+    text-color:       @fg0;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             20px;
+}
+
+element selected {
+    background-color: @bg-sel;
+    text-color:       @fg0;
+    border:           1px;
+    border-color:     @green-dark;
+}

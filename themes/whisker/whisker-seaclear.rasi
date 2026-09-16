@@ -1,0 +1,111 @@
+/**
+ * whisker-seaclear.rasi
+ * Tema marino claro y suave
+ */
+@import "config.rasi"
+
+* {
+    /* Fondos: Azul agua y cian muy claros con leve transparencia */
+    bg0:        #67c1cff0; 
+    bg1:        #c8ebf0f0; 
+    
+    /* Selección: Azul marino suave brillante */
+    bg-sel:     #0077b633; 
+
+    /* Textos: Azul oscuro profundo para alto contraste */
+    fg0:        #03045e; 
+    fg1:        #0077b6; 
+
+    /* Bordes y Acentuados: Turquesa / Menta pastel */
+    border-col: #90e0ef; 
+    accent:     #00b4d8; 
+
+    background-color: transparent;
+    text-color:       @fg0;
+    font:             "Sans 11";
+}
+
+window {
+    background-color: @bg0;
+    border:           1px;
+    border-color:     @border-col;
+    border-radius:    8px;
+    padding:          10px;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing:          10px;
+}
+
+inputbar {
+    background-color: @bg1;
+    border-radius:    6px;
+    padding:          6px 10px;
+    spacing:          8px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color:       @accent;
+}
+
+entry {
+    text-color:       @fg0;
+    placeholder-color:@fg1;
+    placeholder:      "Buscar...";
+}
+
+listbox {
+    background-color: transparent;
+}
+
+listview {
+    background-color: transparent;
+    spacing:          4px;
+    lines:            8;
+}
+
+element {
+    padding:          6px 10px;
+    border-radius:    4px;
+    background-color: transparent;
+    text-color:       @fg0;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+    vertical-align:   0.5;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             20px;
+}
+
+element selected {
+    background-color: @bg-sel;
+    text-color:       @fg0;
+    border:           1px;
+    border-color:     @accent;
+}
+
+sidebar {
+    background-color: transparent;
+    spacing:          4px;
+}
+
+button {
+    padding:          6px 10px;
+    border-radius:    4px;
+    background-color: @bg1;
+    text-color:       @fg0;
+}
+
+button selected {
+    background-color: @bg-sel;
+    text-color:       @fg0;
+    border:           1px;
+    border-color:     @accent;
+}

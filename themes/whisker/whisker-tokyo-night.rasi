@@ -1,0 +1,18 @@
+/**
+ * whisker-tokyo-night.rasi — paleta Tokyo Night
+ * https://github.com/enkia/tokyo-night-vscode-theme
+ */
+  @import "config.rasi"
+* {
+    bg0:        #1a1b26ee;
+    bg1:        #292e42f0;
+    bg-sel:     #3d59a1cc;
+    fg0:        #c0caf5ff;
+    fg1:        #565f89ff;
+    border-col: #292e42ff;
+    accent:     #7aa2f7ff;
+
+    background-color:   transparent;
+    text-color:          @fg0;
+    font:                "Sans 11";
+}

@@ -1,0 +1,17 @@
+/**
+ * whisker-retroterm.rasi
+ */
+  @import "config.rasi"
+* {
+    bg0:        #000000ee;
+    bg1:        #001100f0;
+    bg-sel:     #00ff0033;
+    fg0:        #33ff33ff;
+    fg1:        #99ff99ff;
+    border-col: #00ff66ff;
+    accent:     #ffff66ff;
+
+    background-color: transparent;
+    text-color: @fg0;
+    font: "Sans 11";
+}
