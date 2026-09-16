@@ -6,6 +6,8 @@ Un lanzador de aplicaciones y conmutador de modos dinámico para **Rofi**, con s
 
 ---
 
+![](screenshots/lcars.png)
+
 ## 📋 Requisitos y Dependencias
 
 Para asegurar el correcto funcionamiento del script y el renderizado tipográfico/visual de los temas, instala los siguientes paquetes:
