@@ -2,7 +2,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![Shell Script](https://img.shields.io/badge/Language-Bash-4EAA25?logo=gnu-bash&logoColor=white) ![Rofi](https://img.shields.io/badge/App-Rofi-005F87?logo=archlinux&logoColor=white) ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 
-Un lanzador de aplicaciones y conmutador de modos dinámico para **Rofi**, con soporte para categorización XDG navegable en dos niveles, selector de temas en vivo y un conjunto de apariencias retro y personalizadas (**Mac 1984**, **DOS Shell**, **MS-DOS**, **Windows 95**, **Palmera** y **LCARS**).
+Un lanzador de aplicaciones y conmutador de modos dinámico para **Rofi**, con soporte para categorización XDG navegable en dos niveles, selector de temas en vivo y un conjunto de apariencias retro y personalizadas (**Mac 1984**, **DOS Shell**, **MS-DOS**, **Windows 95**, **Palmera**, **LCARS**, etc.).
 
 ---
 
