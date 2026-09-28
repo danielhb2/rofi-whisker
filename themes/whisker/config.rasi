@@ -5,6 +5,7 @@
  */
 
 configuration {
+    markup-rows: true;
     show-icons:          true;
     icon-theme:          "Papirus";
     display-run:         "<span foreground='#27ae60'>▶</span> Ejecutar";
@@ -13,6 +14,10 @@ configuration {
     me-select-entry:     "";
     me-accept-entry:     "MousePrimary";
     hover-select:        true;
+    filebrowser {
+        show-hidden:     true; /* Muestra archivos y carpetas ocultas */
+        directories-first: true; /* (Opcional) Mantiene las carpetas arriba */
+    }
 }
 
 
@@ -137,7 +142,7 @@ element-icon {
 element-text {
     text-color: inherit;
     vertical-align: 0.5;
-    markup: true;
+    markup-rows: true;
 }
 
 element selected.normal {

@@ -29,7 +29,13 @@
 }
 
 configuration {
+    markup-rows: true;
     display-filebrowser: "<span foreground='maroon'></span> Archivos";
+    
+}
+
+prompt {
+    markup: true;
 }
 
 window {
@@ -62,12 +68,20 @@ listbox {
 
 listview {
     spacing:            6px;
+
 }
 
 element {
     border-radius:      20px;
     padding:            3px 10px;
     margin:             5px;
+
+}
+
+element-text {
+    text-color: inherit;
+    vertical-align: 0.5;
+    markup: true;
 }
 
 element selected {
@@ -87,7 +101,7 @@ sidebar {
     border-radius:      0 0 0 30px;
     orientation:        vertical;
     vertical-align:     0.0;
-    children:           [ mode-switcher, dummy, lcars-image ];
+    children:           [ mode-switcher, dummy ];
 }
 
 /* 2. Un 'dummy' que absorberá todo el espacio vertical sobrante */
@@ -116,5 +130,6 @@ button {
     color:              @bg0;
     border-color:       @violeta;
     background-color:   @border-col;
+    markup:             true;
 }
 

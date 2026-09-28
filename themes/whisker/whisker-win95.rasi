@@ -4,6 +4,7 @@
  */
 @import "config.rasi"
 
+
 * {
     bg0:        #c0c0c0;
     bg1:        #ffffff;
@@ -35,6 +36,8 @@ window {
     border:              2px;
     border-color:        @border-black;
     border-radius:       0px;
+        width:               690px;
+    height:              635px;
 }
 
 /* Barra de título estilo Win95 */
@@ -45,6 +48,21 @@ inputbar {
     border:              0px 0px 2px 0px;
     border-color:        @border-black;
     padding:             6px 8px;
+    children:         [ "prompt", "entry", "textbox-close" ];
+}
+
+textbox-close {
+    str:              " 🗙 ";
+    expand:           false;
+    background-color: @bg4;
+    text-color:       @fg0;
+    font:             "Liberation Sans Bold 11";
+    padding:          0 2px 0 2px;
+    vertical-align:   0.5;
+    horizontal-align: 0.5;
+    border:           0px 2px 2px 0px;
+    border-color:     @border-black;
+    border-radius:    3px;
 }
 
 prompt {
@@ -74,14 +92,7 @@ listbox {
 listview {
     spacing:            2px;
     background-color:   @bg3;
-}
-
-scrollbar {
-    width:             16px;
-    background-color:  @bg0;
-    handle-color:      @bg0;
-    border:            2px;
-    border-color:      @border-dark;
+    scrollbar: false;
 }
 
 element {
@@ -90,7 +101,7 @@ element {
     text-color:          @fg0;
     border-radius:       0px;
     border-color:       @border-black;
-    border: 0 1px 1px 0;
+    border: 0 2px 2px 0;
 }
 
 element selected {
@@ -113,34 +124,34 @@ mainbox {
     border:             0px;
 }
 
+
 sidebar {
     background-color:  @bg0;
-    border:             0px 2px 0px 0px;
-    border-color:       @border-dark;
-    padding:            6px 4px;
+    padding:            6px 0px 0 6px;
     spacing:            4px;
 }
 
 mode-switcher {
     orientation: vertical;
+    padding:            6px 0 6px 8px;
     spacing:     4px;
 }
 
 button {
     background-color:   @bg4;
     text-color:          @fg0;
-    padding:             6px 10px;
+    padding:             20px 10px;
     border:              0 2px 2px 0;
     border-color:        @border-dark;
     horizontal-align:    0;
     border-radius: 3px;
+    expand:              false;
     
 }
 
 button selected {
     background-color:   @bg5;
-    border:              0 2px 2px 0;
+    border:              2px 0 0 2px;
     border-color:        @border-black;
     border-radius: 3px;
 }
-

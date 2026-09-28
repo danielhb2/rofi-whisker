@@ -50,9 +50,15 @@ build_cache_if_needed() {
             /^Icon=/ && icon==""       { sub(/^Icon=/,""); icon=$0 }
             /^Categories=/ && cats=="" { sub(/^Categories=/,""); cats=$0 }
             END { if (fname != "") doprint() }
+            function escape_markup(s) {
+                gsub(/&/, "\\&amp;", s)
+                gsub(/</, "\\&lt;", s)
+                gsub(/>/, "\\&gt;", s)
+                return s
+            }
             function doprint() {
                 if (!nodisp && name != "")
-                    print name "\t" icon "\t" cats "\t" fname
+                    print escape_markup(name) "\t" icon "\t" cats "\t" fname
             }
         ' ${APPDIRS[@]/%//*.desktop} 2>/dev/null > "$CACHE"
     fi
@@ -61,7 +67,7 @@ build_cache_if_needed() {
 print_categories() {
     printf '\0prompt\x1f%s\n' "<span color='blue'></span> Categorías"
     for i in "${!LABELS[@]}"; do
-        printf '<span color="%s">%s</span> %s\0markup\x1ftrue\x1finfo\x1fCAT:%s\n' \
+        printf '<span color="%s">%s</span> %s\0markup-rows\x1ftrue\x1finfo\x1fCAT:%s\n' \
             "${COLORS[$i]}" "${ICONS[$i]}" "${LABELS[$i]}" "${CODES[$i]}"
     done
 }
