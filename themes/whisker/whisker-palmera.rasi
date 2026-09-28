@@ -129,6 +129,7 @@ element-text {
     background-color: inherit;
     text-color:       inherit;
     vertical-align:   0.5;
+    markup-rows: true;
 }
 
 element-icon {
