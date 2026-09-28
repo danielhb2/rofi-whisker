@@ -68,7 +68,7 @@ textbox-closebox {
     vertical-align:   0.5;
     background-color: @mac-white;
     text-color:       @mac-black;
-    padding:          0 2px;
+    padding:          0 2px 0 2px;
 }
 
 prompt {
